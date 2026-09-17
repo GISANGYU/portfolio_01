@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>유기상 | Interaction Frontend Portfolio</title>
+    <meta
+      name="description"
+      content="영상의 문법으로 웹을 움직이는 인터랙션 프론트엔드 유기상의 포트폴리오. CHROMA · weatherUp · inside_gisang의 제작 과정과 기술 스택."
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="유기상 | Interaction Frontend" />
+    <meta property="og:description" content="영상의 문법으로 웹을 움직이는 인터랙션 프론트엔드." />
+    <meta property="og:image" content="https://gisangyu.github.io/portfolio/assets/img/og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M9 7H6v18h3M23 7h3v18h-3' stroke='%23fff' stroke-width='2' fill='none'/%3E%3Ctext x='16' y='21' font-size='12' font-family='Impact' fill='%23fff' text-anchor='middle'%3EGY%3C/text%3E%3C/svg%3E" />
+
+    <!-- 모션 줄이기 설정이 아니면 스크롤 연출을 켠다. GSAP 로드 실패 시 doa.js가 다시 끈다 -->
+    <script>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-motion");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Bebas+Neue&family=Inter:wght@300;400;700;800&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="doa.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "유기상",
+        "alternateName": "Gisang Yu",
+        "jobTitle": "인터랙션 프론트엔드",
+        "sameAs": ["https://github.com/GISANGYU"],
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "계원예술대학교 디지털미디어디자인과" },
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "jQuery", "GSAP", "React"]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+    <header class="gnb">
+      <a class="logo" href="#top" aria-label="유기상 포트폴리오 처음으로">
+        <b>GY</b>
+        <span aria-hidden="true"><i>Motion</i><i>on every</i><i>frame</i></span>
+      </a>
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#value">Value Points</a>
+        <a href="#process">Process</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ 01 HERO ============ -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="glass g1" data-glass="ribbon" data-seed="1" aria-hidden="true"></canvas>
+        <canvas class="glass g2" data-glass="arc" data-seed="2" aria-hidden="true"></canvas>
+
+        <h1 id="hero-title">
+          <span class="sr-only">유기상 — Move the web like a film. 영상의 문법으로 웹을 움직이는 인터랙션 프론트엔드</span>
+          <span class="row r1" aria-hidden="true"><span class="w" style="--d: 0"><span>Move the</span></span></span>
+          <span class="row r2" aria-hidden="true"><span class="w" style="--d: 1"><span>Web</span></span><span class="w" style="--d: 2"><span>Like</span></span></span>
+          <span class="row r4" aria-hidden="true"><span class="w" style="--d: 3"><span>A Film</span></span></span>
+        </h1>
+
+        <div class="hero-sub">
+          <p><strong>유기상 · Gisang Yu</strong><br />영상의 문법으로 웹을 움직이는 인터랙션 프론트엔드. 컷 구성과 타이밍을 스크롤 연출로 옮깁니다.</p>
+          <p class="scroll-hint" aria-hidden="true">SCROLL ↓</p>
+        </div>
+      </section>
+
+      <!-- ============ 02 ABOUT ============ -->
+      <section class="about" id="about" aria-labelledby="about-title">
+        <h2 id="about-title" class="sr-only">About Me</h2>
+        <div class="sticky">
+          <p class="text-container">
+            <span class="text-line">계원예술대학교 디지털미디어디자인과에서</span>
+            <span class="text-line">웹 퍼블리싱과 스크롤 인터랙션을 중심으로 작업합니다.</span>
+            <span class="text-line">화면이 언제 나타나고 어떤 순서로 바뀌는지를</span>
+            <span class="text-line">먼저 정하고 코드로 옮깁니다.</span>
+            <span class="text-line space" aria-hidden="true"></span>
+            <span class="text-line">결과물의 개수보다, 직접 설명할 수 있는</span>
+            <span class="text-line">프로젝트 세 개를 반응형 · 접근성 · 성능 기준으로</span>
+            <span class="text-line">다시 고치고 있습니다.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 03 SKILLS ============ -->
+      <section class="section skills" id="skills" aria-labelledby="skills-title">
+        <div class="stage">
+          <div class="halo" aria-hidden="true"></div>
+          <canvas class="glass g3" data-glass="knot" data-seed="3" aria-hidden="true"></canvas>
+          <div class="title-wrap title_animation">
+            <h2 id="skills-title" class="bracket">Skills</h2>
+          </div>
+          <div class="marquee tools" aria-label="사용 도구">
+            <ul style="--dur: 36s">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>jQuery</li><li>GSAP</li><li>React</li><li>Git</li><li>Figma</li><li>Photoshop</li><li>Illustrator</li><li>Unity</li><li>VS Code</li>
+              <li aria-hidden="true">HTML5</li><li aria-hidden="true">CSS3</li><li aria-hidden="true">JavaScript</li><li aria-hidden="true">jQuery</li><li aria-hidden="true">GSAP</li><li aria-hidden="true">React</li><li aria-hidden="true">Git</li><li aria-hidden="true">Figma</li><li aria-hidden="true">Photoshop</li><li aria-hidden="true">Illustrator</li><li aria-hidden="true">Unity</li><li aria-hidden="true">VS Code</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="skill-cols">
+          <li>
+            <span class="lv">MAIN</span>
+            <h3>Markup &amp; Style</h3>
+            <p>시맨틱 HTML · CSS 레이아웃<br />CHROMA 4p · inside_gisang 6p</p>
+          </li>
+          <li>
+            <span class="lv">MAIN</span>
+            <h3>Interaction</h3>
+            <p>JavaScript · jQuery · TweenMax<br />스크롤 · 전환 연출</p>
+          </li>
+          <li>
+            <span class="lv ghost">USED</span>
+            <h3>Framework</h3>
+            <p>React · CSS Modules · Context API<br />weatherUp</p>
+          </li>
+          <li>
+            <span class="lv ghost">NEXT</span>
+            <h3>Data &amp; Quality</h3>
+            <p>API 연동 · 비동기 처리<br />반응형 · 접근성 · 성능</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ 04 WORK ============ -->
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="title-wrap title_animation">
+          <h2 id="work-title" class="bracket">Work</h2>
+        </div>
+
+        <div class="logos" aria-hidden="true">
+          <div class="marquee">
+            <ul style="--dur: 48s">
+              <li>CHROMA</li><li>웨더업</li><li>Inside Gisang</li><li>TweenMax</li><li>리액트</li><li>GitHub Pages</li><li>Scroll Motion</li><li>퍼블리싱</li><li>Keyframe</li>
+              <li>CHROMA</li><li>웨더업</li><li>Inside Gisang</li><li>TweenMax</li><li>리액트</li><li>GitHub Pages</li><li>Scroll Motion</li><li>퍼블리싱</li><li>Keyframe</li>
+            </ul>
+          </div>
+          <div class="marquee">
+            <ul style="--dur: 54s; --dir: reverse">
+              <li>Context API</li><li>시맨틱</li><li>CSS Modules</li><li>Matter.js</li><li>인터랙션</li><li>anime.js</li><li>Responsive</li><li>접근성</li><li>Timeline</li>
+              <li>Context API</li><li>시맨틱</li><li>CSS Modules</li><li>Matter.js</li><li>인터랙션</li><li>anime.js</li><li>Responsive</li><li>접근성</li><li>Timeline</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cards">
+          <a class="card wide" href="../projects/chroma.html">
+            <article aria-labelledby="w1">
+              <div class="card-img">
+                <img src="../assets/img/chroma-main.webp" width="1440" height="900" loading="lazy" alt="CHROMA 메인 화면. 배경 영상 위에 원과 사각형 로고, 큰 CHROMA 타이포그래피가 배치되어 있다." />
+                <div class="card-info">
+                  컬러 트렌드·배색 추천·브랜드 컬러를 소개하는 4페이지 웹
+                  <ul><li>jQuery · TweenMax 스크롤 연출</li><li>1인 제작 · 기여도 100%</li><li>반응형 · 접근성 2.0 준비</li></ul>
+                </div>
+                <ul class="tags"><li>Multi-page Web</li><li>Scroll Motion</li></ul>
+              </div>
+              <div class="card-name"><span>2023.10</span><strong id="w1">CHROMA</strong></div>
+            </article>
+          </a>
+
+          <a class="card" href="../projects/weatherup.html">
+            <article aria-labelledby="w2">
+              <div class="card-img">
+                <img src="../assets/img/weatherup-main.webp" width="1440" height="900" loading="lazy" alt="weatherUp 첫 화면. 7개 날씨 선택 버튼과 '완벽한 맑은 날' 제목." />
+                <div class="card-info">
+                  날씨를 고르면 테마와 추천 콘텐츠가 바뀌는 웹앱
+                  <ul><li>React · Context API</li><li>라우팅 · CORS · 자동재생 해결</li></ul>
+                </div>
+                <ul class="tags"><li>React App</li><li>UI Theme</li></ul>
+              </div>
+              <div class="card-name"><span>2026.04 – 06</span><strong id="w2">weatherUp</strong></div>
+            </article>
+          </a>
+
+          <a class="card" href="../projects/inside-gisang.html">
+            <article aria-labelledby="w3">
+              <div class="card-img">
+                <img src="../assets/img/inside-emotion.webp" width="1440" height="900" loading="lazy" alt="inside_gisang 감정 캐릭터 페이지. 같은 인물을 다섯 가지 색의 감정 캐릭터로 그린 일러스트." />
+                <div class="card-info">
+                  다섯 감정 캐릭터로 구성한 6페이지 자기소개 웹
+                  <ul><li>data.js 콘텐츠 분리</li><li>인라인 스타일 268개 정리 중</li></ul>
+                </div>
+                <ul class="tags"><li>Multi-page Web</li><li>Refactoring</li></ul>
+              </div>
+              <div class="card-name"><span>2025.11 – 12</span><strong id="w3">inside_gisang</strong></div>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ 05 VALUE POINTS ============ -->
+      <section class="value" id="value" aria-labelledby="value-title">
+        <div class="sticky">
+          <h2 id="value-title" class="value-title">
+            <span class="bracket">Value</span>
+            <span class="plain">Points</span>
+          </h2>
+          <svg class="orbit" viewBox="0 0 480 480" aria-hidden="true">
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(0 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(22.5 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(45 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(67.5 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(90 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(112.5 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(135 240 240)" />
+            <ellipse cx="240" cy="240" rx="230" ry="118" transform="rotate(157.5 240 240)" />
+          </svg>
+          <ul class="value-list">
+            <li class="value-item">
+              <div class="num"><span data-target="31">31</span></div>
+              <p>GitHub Pages로 배포해<br />지금 열어 볼 수 있는 사이트</p>
+              <small>2026.09.17 GitHub API 기준</small>
+            </li>
+            <li class="value-item">
+              <div class="num"><span data-target="3">3</span></div>
+              <p>코드를 직접 설명할 수 있는<br />대표 프로젝트</p>
+              <small>CHROMA · weatherUp · inside_gisang</small>
+            </li>
+            <li class="value-item">
+              <div class="num"><span data-target="42">42</span></div>
+              <p>대표 프로젝트 3개 저장소에<br />남긴 커밋</p>
+              <small>13 + 19 + 10</small>
+            </li>
+            <li class="value-item">
+              <div class="num"><span data-target="5">5</span><sup>+1</sup></div>
+              <p>보유 자격증<br />웹디자인기능사 외</p>
+              <small>정보처리기능사 준비 중</small>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 06 PROCESS ============ -->
+      <section class="process" id="process" aria-labelledby="process-title">
+        <div class="inner">
+          <h2 id="process-title" class="process-title">
+            <span class="outline">How I</span>
+            <span class="bracket">Solve</span>
+          </h2>
+          <p class="process-sub">CHROMA의 스크롤 연출 문제를 해결한 5단계</p>
+
+          <ol class="process-cards">
+            <li class="p-card c1" style="--r0: 0; --y0: 0">
+              <p class="step">STEP 01</p>
+              <h3>Problem</h3>
+              <div class="body">
+                <h4>움직임이<br />끊겨서 나타났다</h4>
+                <p>4개 페이지에 붙인 스크롤 연출에서 요소가 중간 단계 없이 튀어나왔습니다.</p>
+              </div>
+            </li>
+            <li class="p-card c2" style="--r0: -3; --y0: -10">
+              <p class="step">STEP 02</p>
+              <h3>Cause</h3>
+              <div class="body">
+                <h4>보간을 직접<br />계산하고 있었다</h4>
+                <p>스크롤 이벤트에서 위치 값을 읽어 애니메이션을 제어했습니다.</p>
+              </div>
+            </li>
+            <li class="p-card c3" style="--r0: 3; --y0: 10">
+              <p class="step">STEP 03</p>
+              <h3>Attempt</h3>
+              <div class="body">
+                <h4>타이밍을<br />수작업으로 맞췄다</h4>
+                <p>지연 함수와 휠 입력으로 맞췄지만 보정 코드가 늘어 수정이 어려워졌습니다.</p>
+              </div>
+            </li>
+            <li class="p-card c4" style="--r0: -3; --y0: -10">
+              <p class="step">STEP 04</p>
+              <h3>Solution</h3>
+              <div class="body">
+                <h4>보간은<br />라이브러리에 맡겼다</h4>
+                <p>TweenMax에 이징과 시간 계산을 넘기고 연출 순서 설계에 집중했습니다.</p>
+              </div>
+            </li>
+            <li class="p-card c5" style="--r0: 3; --y0: 10">
+              <p class="step">STEP 05</p>
+              <h3>Next</h3>
+              <div class="body">
+                <h4>기본기를<br />다시 채운다</h4>
+                <p>16.9MB → 2MB, 반응형 · 접근성 대응을 CHROMA 2.0에서 고칩니다.</p>
+              </div>
+            </li>
+            <li class="process-end">어디까지 직접 계산하고 어디서부터 맡길지 정하는 것도 구현의 일부입니다.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ 07 CONTACT ============ -->
+    <footer class="contact" id="contact" aria-labelledby="contact-title">
+      <canvas class="glass g4" data-glass="prism" data-seed="4" aria-hidden="true"></canvas>
+      <h2 id="contact-title" class="sr-only">Contact</h2>
+      <div class="cta">
+        <a href="https://github.com/GISANGYU" rel="noopener">View GitHub <span aria-hidden="true">[ → ]</span></a>
+      </div>
+
+      <div class="contact-info">
+        <div>
+          유기상 · Gisang Yu<br />
+          계원예술대학교 디지털미디어디자인과<br />
+          인터랙션 프론트엔드 · 웹 퍼블리셔 지원
+        </div>
+        <div>
+          CONTACT INFO<br />
+          <a href="https://github.com/GISANGYU" rel="noopener">github.com/GISANGYU <span aria-hidden="true">→</span></a><br />
+          <a href="../index.html">Film-style Portfolio (v2) <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="marquee outline-type" aria-hidden="true">
+        <ul>
+          <li>MOVE THE WEB</li><li>LIKE A FILM</li><li>MOVE THE WEB</li><li>LIKE A FILM</li>
+        </ul>
+      </div>
+
+      <p class="copyright">© 2026 Gisang Yu. Built with HTML · CSS · GSAP</p>
+    </footer>
+
+    <button class="top-button" type="button" aria-label="맨 위로">
+      <svg viewBox="0 0 16 22" aria-hidden="true"><path d="M8 21V1M1 8l7-7 7 7" stroke="#fff" stroke-width="1.2" fill="none" /></svg>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="doa.js" defer></script>
+  </body>
+</html>
